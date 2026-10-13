@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><title>Gem Store - Contact</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>Gem Store Demo</b><span><a href="shop.html">Catalogue</a><a href="contact.html">Contact</a><a href="#" onclick="sessionStorage.clear();window.location='index.html'">Logout</a></span></header>
+<div class="box"><h2>Contact Us</h2>
+<label>Name</label><input id="name" type="text"><label>Email</label><input id="email" type="text">
+<label>Message</label><textarea id="msg" rows="4"></textarea>
+<button id="submitBtn" onclick="send()">Submit</button><p id="result"></p></div>
+<script>
+function send(){
+ var n=document.getElementById('name').value,e=document.getElementById('email').value,m=document.getElementById('msg').value,r=document.getElementById('result');
+ if(!n||!e||!m){r.className='err';r.innerText='All fields are required';return;}
+ r.className='ok';r.innerText='Thank you '+n+', your message has been submitted.';
+}
+</script></body></html>

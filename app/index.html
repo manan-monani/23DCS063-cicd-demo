@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><title>Gem Store - Login</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>Gem Store Demo</b></header>
+<div class="box"><h2>Login</h2>
+<label>Username</label><input id="username" type="text">
+<label>Password</label><input id="password" type="password">
+<button id="loginBtn" onclick="doLogin()">Login</button>
+<p id="message" class="err"></p></div>
+<script>
+function doLogin(){
+ var u=document.getElementById('username').value, p=document.getElementById('password').value;
+ if(u==='student' && p==='test123'){ sessionStorage.setItem('user',u); window.location='shop.html'; }
+ else { document.getElementById('message').innerText='Invalid username or password'; }
+}
+</script></body></html>

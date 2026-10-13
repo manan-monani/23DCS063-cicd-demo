@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><title>Gem Store - Catalogue</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>Gem Store Demo</b><span><a href="shop.html">Catalogue</a><a href="contact.html">Contact</a><a href="#" id="logout" onclick="sessionStorage.clear();window.location='index.html'">Logout</a></span></header>
+<div class="box wide"><h2 id="welcome">Welcome</h2><p>Browse the latest items in the catalogue.</p>
+<div class="card"><b>Gold Ring</b><br>Rs. 18,500</div><div class="card"><b>Silver Anklet</b><br>Rs. 3,200</div><div class="card"><b>Diamond Pendant</b><br>Rs. 42,000</div></div>
+<script>var u=sessionStorage.getItem('user'); if(!u){window.location='index.html';} else {document.getElementById('welcome').innerText='Welcome, '+u;}</script></body></html>
